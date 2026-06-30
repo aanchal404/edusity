@@ -1,43 +1,140 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:wght@300;400;600;700&display=swap');
 
-
 *{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Outfit", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", sans-serif;
 }
+
+html{
+    scroll-behavior: smooth;
+}
+
 body{
-  background: #f5f5f5;
+    background: #f5f5f5;
+    overflow-x: hidden;
 }
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 a{
-  text-decoration: none;
-  color: inherit;
-  line-height: 1;
-  cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    line-height: 1;
+    cursor: pointer;
 }
+
+ul{
+    list-style: none;
+}
+
+button{
+    font-family: inherit;
+}
+
 .container{
-  padding-left: 10%;
-  padding-right: 10%;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
 }
+
 .btn{
-  background: #fff;
-  color: #212121;
-  padding: 14px 25px;
-  font-size: 16px;
-  border-radius: 30px;
-  cursor: pointer;
-  border: 0;
-  outline: 0;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+    background: #fff;
+    color: #212121;
+    padding: 14px 28px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    cursor: pointer;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    transition: 0.3s ease;
 }
+
+.btn:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,.15);
+}
+
 .btn img{
-  width: 20px;
-  margin-left: 10px;
+    width: 18px;
 }
-.btn.dark-btn{
-  background: #212EA0;
-  color: #fff;
+
+.dark-btn{
+    background: #212EA0;
+    color: #fff;
+}
+
+/* ================= Laptop ================= */
+
+@media (max-width:1200px){
+
+    .container{
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
+}
+
+/* ================= Tablet ================= */
+
+@media (max-width:992px){
+
+    .container{
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .btn{
+        padding: 13px 24px;
+        font-size: 15px;
+    }
+
+}
+
+/* ================= Mobile ================= */
+
+@media (max-width:768px){
+
+    .container{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .btn{
+        padding: 12px 22px;
+        font-size: 14px;
+    }
+
+    .btn img{
+        width: 16px;
+    }
+
+}
+
+/* ================= Small Mobile ================= */
+
+@media (max-width:480px){
+
+    .container{
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .btn{
+        padding: 12px 20px;
+        font-size: 14px;
+        border-radius: 25px;
+    }
+
 }

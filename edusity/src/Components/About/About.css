@@ -1,40 +1,136 @@
 .about{
+    width: 90%;
     margin: 100px auto;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    width: 90%;
+    align-items: center;
+    gap: 50px;
 }
+
 .about-left{
     flex-basis: 40%;
     position: relative;
 }
+
 .about-right{
     flex-basis: 56%;
 }
+
 .about-img{
     width: 100%;
     border-radius: 10px;
+    display: block;
 }
+
 .play-icon{
     width: 60px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    cursor: pointer;
 }
+
 .about h3{
+    font-size: 16px;
     font-weight: 600;
-    font-weight: 16px;
     color: #212EA0;
+    text-transform: uppercase;
+    margin-bottom: 10px;
 }
+
 .about h2{
-    font-size: 35px;
+    font-size: 36px;
     color: #000F38;
-    margin: 10px;
-    max-width: 400px;
+    max-width: 450px;
+    margin-bottom: 20px;
+    line-height: 1.2;
 }
+
 .about p{
-    color: black;
+    color: #676767;
     margin-bottom: 15px;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+/* =============== Tablet =============== */
+
+@media (max-width:992px){
+
+    .about{
+        gap: 30px;
+    }
+
+    .about h2{
+        font-size: 30px;
+    }
+
+    .play-icon{
+        width: 50px;
+    }
+}
+
+/* =============== Mobile =============== */
+
+@media (max-width:768px){
+
+    .about{
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+        margin: 70px auto;
+    }
+
+    .about-left,
+    .about-right{
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+    .about-img{
+        width: 100%;
+    }
+
+    .about h2{
+        font-size: 28px;
+        max-width: 100%;
+        margin: 15px auto;
+    }
+
+    .about p{
+        text-align: center;
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .play-icon{
+        width: 55px;
+    }
+}
+
+/* =============== Small Mobile =============== */
+
+@media (max-width:480px){
+
+    .about{
+        width: 92%;
+        margin: 60px auto;
+    }
+
+    .about h3{
+        font-size: 14px;
+    }
+
+    .about h2{
+        font-size: 24px;
+    }
+
+    .about p{
+        font-size: 14px;
+    }
+
+    .play-icon{
+        width: 45px;
+    }
 }

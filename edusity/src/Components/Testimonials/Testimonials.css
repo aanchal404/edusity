@@ -1,56 +1,167 @@
 .testimonials{
+    width: 90%;
+    max-width: 1200px;
     margin: 80px auto;
-    padding: 0 80px;
+    padding: 0 60px;
     position: relative;
 }
-.next-btn, .back-btn{
+
+.next-btn,
+.back-btn{
     position: absolute;
     top: 50%;
-    right: 0;
-    transform: translate(-50%);
-    padding: 15px;
+    transform: translateY(-50%);
     width: 50px;
+    padding: 12px;
     border-radius: 50%;
     cursor: pointer;
     background: #212EA0;
+    z-index: 10;
+    transition: 0.3s;
 }
+
+.next-btn:hover,
+.back-btn:hover{
+    transform: translateY(-50%) scale(1.08);
+}
+
+.next-btn{
+    right: 0;
+}
+
 .back-btn{
-    right: auto;
     left: 0;
 }
+
 .slider{
-      overflow: hidden; 
-} 
+    overflow: hidden;
+}
+
 .slider ul{
     display: flex;
     width: 200%;
-    overflow-x: hidden;
-    transition: 0.5s;
+    transition: transform 0.5s ease;
 }
+
 .slider ul li{
     list-style: none;
     width: 50%;
     padding: 20px;
 }
+
 .slide{
-    box-shadow: 0 0 20px rgba(0,0,0,0,0.05);
-    padding: 40px;
+    background: #fff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.08);
+    padding: 35px;
     border-radius: 10px;
     color: #676767;
-    line-height: 1.4;
+    line-height: 1.7;
+    height: 100%;
 }
-.slide img{
-    width: 65px;
-    border-radius: 50%;
-    margin-right: 10px;
-    border: 4px solid #212EA0;
-}
+
 .user-info{
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    font-size: 15px;
 }
+
+.user-info img{
+    width: 65px;
+    border-radius: 50%;
+    border: 4px solid #212EA0;
+    margin-right: 15px;
+}
+
 .user-info h3{
     color: #212EA0;
+    margin-bottom: 5px;
+}
+
+.user-info span{
+    font-size: 14px;
+    color: #676767;
+}
+
+/* ================= Laptop ================= */
+
+@media (max-width:992px){
+
+    .testimonials{
+        padding: 0 50px;
+    }
+
+    .slide{
+        padding: 28px;
+    }
+
+}
+
+/* ================= Tablet ================= */
+
+@media (max-width:768px){
+
+    .testimonials{
+        width: 92%;
+        padding: 0 45px;
+    }
+
+    .slider ul li{
+        width: 100%;
+    }
+
+    .slider ul{
+        width: 400%;
+    }
+
+    .slide{
+        padding: 25px;
+    }
+
+    .next-btn,
+    .back-btn{
+        width: 42px;
+        padding: 10px;
+    }
+
+}
+
+/* ================= Mobile ================= */
+
+@media (max-width:480px){
+
+    .testimonials{
+        padding: 0 30px;
+        margin: 60px auto;
+    }
+
+    .slide{
+        padding: 20px;
+    }
+
+    .user-info{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .user-info img{
+        margin-right: 0;
+        margin-bottom: 15px;
+        width: 60px;
+    }
+
+    .user-info h3{
+        font-size: 18px;
+    }
+
+    .slide p{
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .next-btn,
+    .back-btn{
+        width: 36px;
+        padding: 8px;
+    }
+
 }
